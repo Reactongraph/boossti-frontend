@@ -113,24 +113,24 @@ export const useGetApp = () => {
         formSlug: slugify(form?.form?.name || '', { lower: true }),
       });
     });
-    return items;
+    return items;              
   };
 
   useEffect(() => {
     let domain = window.location.host;
 
-    if (
-      (!['www.boossti.com', 'localhost:3000'].includes(domain) &&
-        !domain?.includes('.cloudfront.net')) ||
-      process.env.NEXT_PUBLIC_APP_IsApp === 'true'
-    ) {
-      setIsApp(true);
-      dispatch(updateSettingAction({ isApp: true, appError: null }));
-      if (domain?.includes('localhost')) {
-        domain = process.env.NEXT_PUBLIC_APP_DOMAIN;
-      }
-      getApp(domain);
-    }
+    // if (
+    //   (!['www.boossti.com', 'localhost:4000'].includes(domain) &&
+    //     !domain?.includes('.cloudfront.net')) ||
+    //   process.env.NEXT_PUBLIC_APP_IsApp === 'true'
+    // ) {
+    //   setIsApp(true);
+    //   dispatch(updateSettingAction({ isApp: true, appError: null }));
+    //   if (domain?.includes('localhost')) {
+    //     domain = process.env.NEXT_PUBLIC_APP_DOMAIN;
+    //   }
+    //   getApp(domain);
+    // }
 
     setLoading(false);
   }, [authenticated]);
