@@ -5,8 +5,9 @@ import { createSubscriptionHandshakeLink } from 'aws-appsync-subscription-link';
 import projectConfig from '../index';
 
 const region = projectConfig.appsyncRegion;
-const url = process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT;
-const apiKey = process.env.NEXT_PUBLIC_GRAPHQL_APIKEY;
+const url = process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT||"https://evbszmbslnbt3gxiful5qbjz5y.appsync-api.us-east-1.amazonaws.com/graphql";
+const apiKey = process.env.NEXT_PUBLIC_GRAPHQL_APIKEY|| "da2-swmztqtkojgkri2c6poycwipye"
+
 
 const cognitoAuth: AuthOptions = {
   type: AUTH_TYPE.AMAZON_COGNITO_USER_POOLS,
