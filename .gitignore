@@ -49,7 +49,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env.local
 .env.development.local
 .env.test.local
 .env.production.local
@@ -157,3 +156,6 @@ temporary
 !.yarn/sdks
 !.yarn/versions
 .yarnrc.yml
+temp_auto_push.bat
+temp_interactive_push.bat
+config.bat
